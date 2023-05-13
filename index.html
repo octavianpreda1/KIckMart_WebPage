@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>KickMart</title>
+        <link rel="icon" href="images/logo.svg">
+       
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+        
+
+
+
+    <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+  
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+  
+        .b-example-divider {
+          width: 100%;
+          height: 3rem;
+          background-color: rgba(0, 0, 0, .1);
+          border: solid rgba(0, 0, 0, .15);
+          border-width: 1px 0;
+          box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+  
+        .b-example-vr {
+          flex-shrink: 0;
+          width: 1.5rem;
+          height: 100vh;
+        }
+  
+        .bi {
+          vertical-align: -.125em;
+          fill: currentColor;
+        }
+  
+        .nav-scroller {
+          position: relative;
+          z-index: 2;
+          height: 2.75rem;
+          overflow-y: hidden;
+        }
+  
+        .nav-scroller .nav {
+          display: flex;
+          flex-wrap: nowrap;
+          padding-bottom: 1rem;
+          margin-top: -1px;
+          overflow-x: auto;
+          text-align: center;
+          white-space: nowrap;
+          -webkit-overflow-scrolling: touch;
+        }
+  
+        .btn-bd-primary {
+          --bd-violet-bg: #712cf9;
+          --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+  
+          --bs-btn-font-weight: 600;
+          --bs-btn-color: var(--bs-white);
+          --bs-btn-bg: var(--bd-violet-bg);
+          --bs-btn-border-color: var(--bd-violet-bg);
+          --bs-btn-hover-color: var(--bs-white);
+          --bs-btn-hover-bg: #6528e0;
+          --bs-btn-hover-border-color: #6528e0;
+          --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+          --bs-btn-active-color: var(--bs-btn-hover-color);
+          --bs-btn-active-bg: #5a23c8;
+          --bs-btn-active-border-color: #5a23c8;
+        }
+        .bd-mode-toggle {
+          z-index: 1500;
+        }
+      </style>
+  
+      
+      <!-- Custom styles for this template -->
+      <!-- ad -->
+  
+      <link rel="stylesheet" href="style.css">
+     
+    </head>
+    <body>
+        <header id="pageHeader">
+            <div class="logo">KickMart
+                <div class="plogo" >Kicking It Since 2002 </div>
+            </div>
+            <nav class="navigation">
+                <a class="HomeBtn" href="index.html">Home</a>
+                <a class="ShopBtn" href="shop.html">Shop</a>
+              
+               
+        
+                <button id="btnLogin-popup" class="btnLogin-popup logged">Log In</button>
+                <div class="loggedUser">
+                    <label id="cart"></label><ion-icon class="cartIcon" name="cart-outline"></ion-icon>
+                    <label id="userLabel" class="user"></label><ion-icon class="userIcon user" name="person"></ion-icon>
+                    <div class="logOut">
+                        <button type="button" class="logOutBtn">Log Out</button>
+                    </div>
+                   
+            </div>
+            
+            </nav>
+            
+           
+        </header>
+       
+    
+       
+    <div class="site">
+
+    <div class="wrapper">
+        <span class="iconClose"><ion-icon name="exit"></ion-icon></span>
+        <div class="login form">
+            <h2>Log In</h2>
+            <form action="#">
+                <div class="inputBox">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input id="loginEmail" type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="inputBox">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input id="loginPassword" type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="r-f">
+                    <label for=""><input type="checkbox"> Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button id="loginBtn" type="submit" class="submitBtn">Log In</button>
+                <div class="login-register">
+                    <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="register form">
+            <h2>Register</h2>
+            <form action="#">
+                <div class="inputBox">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input id="username" type="text" required>
+                    <label>Username</label>
+                </div>
+                <div class="inputBox">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input id="email" type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="inputBox">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input id="password" type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="r-f">
+                    <label for=""><input type="checkbox"> I agree to the terms & conditions</label>
+                    
+                </div>
+                <button type="submit" id="registerBtn" class="submitBtn">Register</button>
+                <div class="login-register">
+                    <p>Already have an account? <a href="#" class="login-link">Log In</a></p>
+                </div>
+            </form>
+        </div>
+    </div><br>
+
+  
+
+
+  
+ 
+  
+  <main>
+  
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"   aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"  aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div id="item1" class="carousel-item active">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="rgba(23, 23, 23, 0.327)"/></svg>
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>We are KickMart</h1>
+              <p>Whether you're a seasoned sneaker collector or just getting started, KickMart has everything you need to stay on top of the latest trends and styles.</p>
+              <p><a id= "signNow"class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+            </div>
+          </div>
+        </div>
+        <div id="item2" class="carousel-item">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="rgba(23, 23, 23, 0.327)"/></svg>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>We got you</h1>
+              <p>We have a wide selection of sneakers from all the top brands, including Nike, Adidas, Puma, and Reebok.</p>
+              <p><a class="btn btn-lg btn-primary" href="shop.html">Shop now</a></p>
+            </div>
+          </div>
+        </div>
+        <div  id="item3" class="carousel-item">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="rgba(23, 23, 23, 0.327)"/></svg>
+          <div class="container">
+            <div class="carousel-caption text-end">
+              <h1>Only the finest</h1>
+              <p>KickMart has a team of sneaker experts who are always on the lookout for the latest trends and styles, so you can be sure you're getting the best selection.</p>
+              <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  
+  
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+  
+    <div class="container marketing">
+  
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <svg id="roundImg1" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title> alt=""><rect width="100%" height="100%" fill="rgba(23, 23, 23, 0.127)"/></svg>
+          <h2 class="fw-normal">Quality</h2>
+          <p>At KickMart, we take pride in offering high-quality products that meet the needs of our valued customers. </p>
+         
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <svg id="roundImg2" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="rgba(23, 23, 23, 0.127)"/></svg>
+          <h2 class="fw-normal">Fast Delivery</h2>
+          <p>We understand that our customers value speedy and reliable delivery, which is why we offer a delivery timeframe of 1-3 business days.</p>
+          
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <svg  id="roundImg3" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="rgba(23, 23, 23, 0.127)"/></svg>
+          <h2 class="fw-normal">Security</h2>
+          <p>Our website uses the best encryption technology to protect your personal information, and we offer a range of secure payment options. </p>
+         
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+  
+  
+      <!-- START THE FEATURETTES -->
+  
+      <hr class="featurette-divider">
+  
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">NIKE</h2>
+          <p class="lead">Nike is a global sportswear and footwear company that offers a range of athletic and casual products for men, women, and kids. Founded in 1964, Nike has become a household name known for its innovative designs, quality materials, and focus on performance. The brand is popular among athletes and fitness enthusiasts, and offers a wide range of products including sneakers, apparel, and accessories for a variety of sports and activities. Nike is recognized worldwide for its iconic "swoosh" logo and slogan "Just Do It," and has a strong reputation for promoting sustainability and social responsibility in its manufacturing and business practices.</p>
+        </div>
+        <div class="col-md-5">
+          <svg id="squareImg1" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
+        </div>
+      </div>
+  
+      <hr class="featurette-divider">
+  
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1">Jordan</h2>
+          <p class="lead">Jordan is a subsidiary brand of Nike, named after former basketball player Michael Jordan. The brand specializes in high-performance athletic footwear, apparel and accessories for basketball and lifestyle, and is known for its innovative designs and limited-edition releases. Jordan is recognized worldwide for its iconic "Jumpman" logo and is a favorite among basketball enthusiasts and collectors.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <svg id="squareImg2" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
+        </div>
+      </div>
+  
+      <hr class="featurette-divider">
+  
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">Puma <span class="text-body-secondary"></span></h2>
+          <p class="lead">Puma is a German sportswear brand that designs and produces a wide range of athletic and lifestyle products. Founded in 1948, Puma is known for its innovative designs and use of technology to enhance performance. The brand offers products for sports such as soccer, running, golf and motorsport, as well as fashion and lifestyle products. Puma is recognized for its iconic cat logo and collaborations with well-known designers and celebrities. Puma is also committed to sustainability and ethical business practices.</p>
+        </div>
+        <div class="col-md-5">
+          <svg id="squareImg3" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
+        </div>
+      </div>
+  
+      <hr class="featurette-divider">
+  
+      <!-- /END THE FEATURETTES -->
+  
+    </div><!-- /.container -->
+  
+  
+    <!-- FOOTER -->
+    <footer class="container">
+      <p class="float-end"><a href="#">Back to top</a></p>
+      <p>&copy; 2002–2023 KickMart, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+  </main>
+
+</div>
+</div>
+  
+    
+
+        <script src="script.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+        
+    </body>
+</html>
